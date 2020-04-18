@@ -7,11 +7,15 @@ $(function() {
 
         it('URL is definded', function() {
             allFeeds.forEach(feed => 
-                expect(feed).toBeDefined()
+                expect(feed.url).toBeDefined()
+            )
+
+            allFeeds.forEach(feed =>
+                expect(feed.url.length).not.toBe(0)
             )
         });
 
-        it('URL has name', function() {
+        it('has name', function() {
             allFeeds.forEach(feed => 
                 expect(feed.name).toBeDefined()
             );
